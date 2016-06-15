@@ -1,1 +1,19 @@
-{{yield}}
+<form class="newBook form-group" {{action 'saveBook' on="submit"}}>
+
+  <label for="bookName" class="">book name: </label>
+  {{input value=book-name class="form-control"}}
+
+  <label for="author" class="">author: </label>
+  {{input value=author class="form-control"}}
+
+  <label for="cost" class="">Price: </label>
+  {{input value=cost class="form-control"}}
+
+  <label for="description" class=''>description: </label>
+  {{input value=description class="form-control"}}
+
+  <label for="imgURL" class="">imgURL: </label>
+  {{input value=imgURL class="form-control"}}
+  <br>
+  <button class="btn btn-primary btn-block" type="submit">Submit</button>
+</form>
