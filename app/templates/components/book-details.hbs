@@ -1,1 +1,8 @@
-{{yield}}
+{{book.bookName}}
+<br>
+{{book.cost}}
+<br>
+{{book.description}}
+<button type="button" {{action 'addToCart'}}>Add To Cart</button>
+{{#link-to 'checkout'}}Checkout{{/link-to}}
+<button type="button" {{action 'deleteBook'}}>delete</button>

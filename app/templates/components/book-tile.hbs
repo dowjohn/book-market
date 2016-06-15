@@ -1,7 +1,8 @@
 <div class="row">
-  <div class="col-sm-4">
-    {{#each model as |book|}}
-      {{book.bookName}}
-    {{/each}}
-  </div>
+  {{#each model as |book|}}
+    <div class="col-sm-4">
+      {{#link-to 'book' book.id}}{{book.bookName}}{{/link-to}}
+      <p><img src={{book.imgURL}} alt="book image"></p>
+    </div>
+  {{/each}}
 </div>
