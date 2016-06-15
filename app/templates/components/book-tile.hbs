@@ -1,8 +1,8 @@
 <div class="row">
   {{#each model as |book|}}
     <div class="col-sm-4">
-      {{#link-to 'book' book.id}}{{book.bookName}}{{/link-to}}
-      <p><img src={{book.imgURL}} alt="book image"></p>
+      {{#link-to 'book' book.id}}{{book.bookName}}
+      <p><img src={{book.imgURL}} alt="book image"></p>{{/link-to}}
     </div>
   {{/each}}
 </div>
