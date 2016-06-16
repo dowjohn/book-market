@@ -1,1 +1,9 @@
-{{yield}}
+{{#each shoppingCart.books as |book|}}
+  {{book.bookName}} -- {{book.cost}}
+  <br>
+  <p>{{#link-to 'book' book.id}}<img src={{book.imgURL}} alt="book image">{{/link-to}}</p>
+  <br>
+  <br>
+  <button type="button" {{action 'removeFromCart' book}}>Remove</button>
+{{/each}}
+<p> total cost: {{total}} </p>
